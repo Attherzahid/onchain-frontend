@@ -7,8 +7,8 @@ import Image from 'next/image';
 
 const HeroSec = () => {
     return (
-        <section class="hero-sec">
-            <div class="container">
+        <section className="hero-sec">
+            <div className="container">
                 <div className="object-wrapper position-relative">
                     <Canvas >
                         <Model />
@@ -17,14 +17,14 @@ const HeroSec = () => {
                     </Canvas>
                     <div className="content-wrapper">
                         <h1 className="main-title font-gilroy-medium">Let’s Build the Future of <span className='font-gilroy-extrabold'>Web3 Investment</span></h1>
-                        <Image src={'/img/barcode.webp'} width={279} height={34}/>
+                        <Image src={'/img/barcode.webp'} width={279} height={34} alt='barcode-image'/>
                     </div>
 
                 </div>
             </div>
-            <div class="obj obj-1"></div>
-            <div class="obj obj-2"></div>
-            <div class="obj obj-3"></div>
+            <div className="obj obj-1"></div>
+            <div className="obj obj-2"></div>
+            <div className="obj obj-3"></div>
         </section>
     )
 }
