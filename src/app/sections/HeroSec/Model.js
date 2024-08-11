@@ -4,7 +4,7 @@ import { useFrame, useThree } from '@react-three/fiber'
 import { useControls } from 'leva'
 
 const Model = () => {
-    const { nodes } = useGLTF("/3d-obj/onchain-logo-1.glb");
+    const { nodes } = useGLTF("/3d-obj/onchain-updated.glb");
     const { viewport } = useThree()
     const torus = useRef(null);
 
@@ -17,7 +17,7 @@ const Model = () => {
         roughness: 0,
         transmission: 1,
         ior: 1.2,
-        chromaticAberration: 0.02,
+        chromaticAberration: 0.06,
         backside: true,
     }
     return (
@@ -28,7 +28,7 @@ const Model = () => {
             <Text font={'/fonts/syncopateBold.ttf'} position={[0, -0.3, -1]} fontSize={.5} color="white" anchorX="center" anchorY="middle">
                 {'Capital'.toUpperCase()}
             </Text>
-            <mesh ref={torus} {...nodes.logo} position={[0, -0.1, 0]}>
+            <mesh ref={torus} {...nodes.logo} position={[0, 0.005, 0]}>
                 <MeshTransmissionMaterial {...materialProps} />
             </mesh>
         </group>

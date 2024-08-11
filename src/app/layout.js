@@ -1,4 +1,4 @@
-import "@/app/styles/base/fonts.scss";
+import "./styles/base/fonts.scss";
 import "@/app/styles/theme_styles.scss"
 
 export const metadata = {
