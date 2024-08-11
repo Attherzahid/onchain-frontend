@@ -30,7 +30,7 @@ const Model = () => {
     }, []);
 
     useFrame(() => {
-        if (windowWidth >= 991) {
+        if (windowWidth >= 992) {
 
             if (torus.current) {
                 // Convert the mouse position to NDC
@@ -76,15 +76,16 @@ const Model = () => {
         chromaticAberration: 0.06,
         backside: true,
     }
+
     return (
         <group scale={viewport.width / 2.4} >
-            <Text font={'/fonts/syncopateBold.ttf'} position={[0, 0.3, -1]} fontSize={.5} color="white" anchorX="center" anchorY="middle">
+            <Text font={'/fonts/syncopateBold.ttf'} position={windowWidth >= 577 ? [0, 0.3, -1] : [0, 0.8, -1]} fontSize={.5} color="white" anchorX="center" anchorY="middle">
                 {'Onchain'.toUpperCase()}
             </Text>
-            <Text font={'/fonts/syncopateBold.ttf'} position={[0, -0.3, -1]} fontSize={.5} color="white" anchorX="center" anchorY="middle">
+            <Text font={'/fonts/syncopateBold.ttf'} position={windowWidth >= 577 ? [0, -0.3, -1] : [0, 0.2, -1]} fontSize={.5} color="white" anchorX="center" anchorY="middle">
                 {'Capital'.toUpperCase()}
             </Text>
-            <mesh ref={torus} {...nodes.logo} position={[0, 0.005, 0]} rotation={[Math.PI, 0, 0]}>
+            <mesh ref={torus} {...nodes.logo} position={windowWidth >= 577 ? [0, 0.005, .2] : [0, 0.2, .7] } rotation={[Math.PI, 0, 0]}>
                 <MeshTransmissionMaterial {...materialProps} />
             </mesh>
         </group>
