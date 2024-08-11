@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: 'fonts/GilroyMedium.ttf' format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy-Semibold";
+  src: 'fonts/GilroySemiBold.ttf' format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+// classes
+.font-gilroy-medium {
+  font-family: "Gilroy-Medium", sans-serif !important;
+  font-weight: 500;
+}
+.font-gilroy-semibold {
+  font-family: "Gilroy-Semibold", sans-serif !important;
+  font-weight: 500;
+}
