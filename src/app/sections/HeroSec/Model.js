@@ -60,7 +60,7 @@ const Model = () => {
                 torus.current.rotation.x -= Math.PI; // Ensure the object remains flipped
             }
         } else {
-            torus.current.rotation.y += 0.01;
+            torus.current.rotation.y += 0.02;
 
             // Flip the object for smaller screens
             torus.current.rotation.x = 3.2;
