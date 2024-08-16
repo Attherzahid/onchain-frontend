@@ -41,8 +41,7 @@
 @media (max-width: 992px) {
   .header {
     &.active {
-      backdrop-filter: blur(10px);
-      background-color: rgba(255, 255, 255, 0.062);
+      background-color: #161b22d6;
     }
     .navbar {
       padding: 10px 0;
@@ -55,8 +54,13 @@
         width: 100vw;
         left: 0;
         padding: 20px;
-        backdrop-filter: blur(10px);
-        background-color: rgba(255, 255, 255, 0.062);
+        background-color: #161b22d6;
+        li {
+          padding: 0 15px;
+          width: 100%;
+          max-width: 720px;
+          margin: 0 auto;
+        }
         &.active {
           display: flex;
           align-items: start;
@@ -64,6 +68,18 @@
       }
       .menu-toggler {
         display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    .navbar {
+      .menu {
+        li {
+          max-width: 540px;
+        }
       }
     }
   }
