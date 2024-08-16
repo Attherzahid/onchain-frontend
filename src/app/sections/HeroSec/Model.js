@@ -30,7 +30,7 @@ const Model = () => {
     }, []);
 
     useFrame(() => {
-        if (windowWidth >= 992) {
+        if (windowWidth >= 991) {
 
             if (torus.current) {
                 // Convert the mouse position to NDC
@@ -63,7 +63,7 @@ const Model = () => {
             torus.current.rotation.y += 0.01;
 
             // Flip the object for smaller screens
-            torus.current.rotation.x = 3.2; 
+            torus.current.rotation.x = 3.2;
 
         }
     });
@@ -77,15 +77,19 @@ const Model = () => {
         backside: true,
     }
 
+    const scaling = windowWidth <= 1440 ? 4 : 1.8;
+    const { width, height } = viewport;
+    const scalingFactor = Math.min(width, height) / scaling;
+
     return (
-        <group scale={viewport.width / 2.4} >
-            <Text font={'/fonts/syncopateBold.ttf'} position={windowWidth >= 577 ? [0, 0.3, -1] : [0, 0.8, -1]} fontSize={.5} color="white" anchorX="center" anchorY="middle">
+        <group scale={[scalingFactor, scalingFactor, scalingFactor]}>
+            <Text font={'/fonts/syncopateBold.ttf'} position={windowWidth >= 1440 ? [0, 0.5, -1.1] : windowWidth >= 991 ? [0, 0.5, 0.3] : windowWidth >= 767 ? [0, 0.5, -0.6] : [0, 0.8, .2]} fontSize={.5} color="white" anchorX="center" anchorY="middle">
                 {'Onchain'.toUpperCase()}
             </Text>
-            <Text font={'/fonts/syncopateBold.ttf'} position={windowWidth >= 577 ? [0, -0.3, -1] : [0, 0.2, -1]} fontSize={.5} color="white" anchorX="center" anchorY="middle">
+            <Text font={'/fonts/syncopateBold.ttf'} position={windowWidth >= 1440 ? [0, -0.1, -1.1] : windowWidth >= 991 ? [0, -0.1, 0.3] : windowWidth >= 767 ? [0, -0.1, -0.6] : [0, 0.18, .2]} fontSize={.5} color="white" anchorX="center" anchorY="middle">
                 {'Capital'.toUpperCase()}
             </Text>
-            <mesh ref={torus} {...nodes.logo} position={windowWidth >= 577 ? [0, 0.005, .2] : [0, 0.2, .7] } rotation={[Math.PI, 0, 0]}>
+            <mesh ref={torus} {...nodes.logo} position={windowWidth >= 1440 ? [0, 0.08, .05] : windowWidth >= 991 ? [0, 0.08, 1.4] : windowWidth >= 767 ? [0, 0.08, 1.2] : windowWidth >= 576 ? [0, 0.2, 2] : [0, 0.2, 2.4]} rotation={[Math.PI, 0, 0]}>
                 <MeshTransmissionMaterial {...materialProps} />
             </mesh>
         </group>

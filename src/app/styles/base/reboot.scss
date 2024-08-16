@@ -42,7 +42,7 @@ h1,
   font-family: "Gilroy-Semibold", sans-serif;
   line-height: 1.2;
   color: var(--heading-color);
-  // font-weight: normal;
+  opacity: .7;
 }
 
 h1,
@@ -77,13 +77,15 @@ p,
 ul.list-style-disc li,
 ol.list-style-decimal li,
 .list-style-check li {
-  color: var(--gray-dark);
+  color: var(--gray-light);
   margin-top: 0;
   margin-bottom: 1rem;
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
-  font-family: "CircularStdRegular", sans-serif;
+  font-family: "Gilroy-Medium", sans-serif;
+  z-index: 1;
+  position: relative;
 }
 ul.list-style-disc {
   list-style: disc !important;

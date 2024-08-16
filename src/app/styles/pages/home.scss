@@ -8,6 +8,7 @@
         max-width: 314px;
         bottom: 40px;
         left: 0;
+
         .main-title {
             font-size: clamp(26px, 5vw, 40px);
             opacity: .7;
@@ -17,10 +18,27 @@
     .object-wrapper {
         position: relative;
         z-index: 1;
-
+        
         >div>div:first-child {
-            min-height: calc(100vh - 199px);
+            min-height: 440px;
+            height: calc(100vh - 199px) !important;
 
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-sec {
+        padding: 74px 0 0;
+    }
+}
+@media (max-width: 475px) {
+    .hero-sec {
+        .object-wrapper {
+            >div>div:first-child {
+                height: calc(100vh - 239px) !important;
+
+            }
         }
     }
 }

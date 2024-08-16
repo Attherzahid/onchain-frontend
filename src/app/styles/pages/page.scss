@@ -1,12 +1,16 @@
-
-
-
-@media (max-width: 1440px) {
-    
-}
-@media (max-width: 991px) {
+.default-sec {
+    min-height: calc(100vh - 105px);
 }
 
-@media (max-width: 767px) {
 
+@media (max-width: 992px) {
+    .default-sec {
+        min-height: calc(100vh - 125px);
+    }
+}
+
+@media (max-width: 475px) {
+    .default-sec {
+        min-height: calc(100vh - 165px);
+    }
 }

@@ -8,9 +8,9 @@ const Footer = () => {
                 <div className="footer-wrapper d-flex justify-content-between gap-2 flex-wrap">
                     <p className=" mb-0 font-gilroy-semibold">Copyright © Onchain Mastery - All Right Reserved</p>
                     <ul className="menu d-flex gap-2 gap-1 flex-wrap">
-                        <li><Link href="">Política de Privacidad</Link></li>
-                        <li><Link href="">Términos y condiciones</Link></li>
-                        <li><Link href="">Aviso Legal</Link></li>
+                        <li><Link href={"/privacy-policy"}>Política de Privacidad</Link></li>
+                        <li><Link href="#">Términos y condiciones</Link></li>
+                        <li><Link href="#">Aviso Legal</Link></li>
                     </ul>
                 </div>
             </div>

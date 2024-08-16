@@ -1,22 +1,33 @@
 @import "./base/base.scss";
 @import "./components/all_components.scss";
 
+.gradient-text {
+  background: var(--heading-color);
+  background: linear-gradient(120deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.42) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
 .obj {
   width: 546px;
   height: 546px;
   position: absolute;
-  background: rgb(68,156,242);
-  background: linear-gradient(120deg, rgba(68,156,242,1) 0%, rgba(68,152,242,1) 59%, rgba(61,66,238,1) 100%);
+  background: rgb(68, 156, 242);
+  background: linear-gradient(120deg, rgba(68, 156, 242, 1) 0%, rgba(68, 152, 242, 1) 59%, rgba(61, 66, 238, 1) 100%);
   filter: blur(400px);
+  pointer-events: none;
+
   &.obj-1 {
     left: calc(50% + 306px);
     top: -200px;
   }
+
   &.obj-2 {
     left: calc(50% - 860px);
     top: 50%;
     transform: translateY(-50%);
   }
+
   &.obj-3 {
     width: 442px;
     height: 442px;
@@ -167,6 +178,7 @@
 .overflow-hidden {
   overflow: hidden;
 }
+
 .bg-center-cover-norepeat {
   background-position: center;
   background-size: cover;
@@ -196,46 +208,6 @@
   li {
     list-style: disc;
   }
-}
-
-
-
-.wpcf7 .wpcf7-spinner {
-  position: absolute;
-  right: 24px;
-  top: 50%;
-  transform: translate(0, -50%);
-  margin: 0;
-}
-
-.wpcf7 .wpcf7-not-valid-tip {
-  margin-top: 6px;
-  font-size: 14px !important;
-  font-weight: 400 !important;
-  line-height: 20px;
-  text-align: start !important;
-}
-
-.wpcf7 .wpcf7-response-output {
-  padding: 8px 10px !important;
-  border-radius: 10px;
-  margin-bottom: 0 !important;
-  margin-top: 18px !important;
-}
-
-.wpcf7 form.invalid .wpcf7-response-output {
-  background-color: #fff9eb;
-  color: #ffb900;
-}
-
-.wpcf7 form.sent .wpcf7-response-output {
-  background-color: #eefdef;
-  color: #46b450;
-}
-
-.wpcf7 form.failed .wpcf7-response-output {
-  color: #dc3232;
-  background-color: #ffe6e6;
 }
 
 
