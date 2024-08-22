@@ -15,9 +15,9 @@ const Header = () => {
                         <Image src={`img/icons/${!isToggle ? 'menu-toggler.svg': 'close-icon.svg'}`} alt='logo' width={isToggle ? 23 : 30} height={isToggle ? 23 : 20} />
                     </button>
                     <ul className={`menu ${isToggle == true && 'active'}`}>
-                        <li><Link href={"/"}>ONCHAIN mastery</Link></li>
-                        <li><Link href={"/"} className='d-flex align-items-center gap-1'>Follow Us On<Image src={'/img/icons/twitter-icon.svg'} width={18} height={17} alt='twitter-icon' /></Link></li>
-                        <li><Link href={"/"}>Contact us</Link></li>
+                        <li><Link href={"https://onchaincapital.es/join"}>Onchain Mastery</Link></li>
+                        <li><Link href={"https://x.com/0nchainCapital"} className='d-flex align-items-center gap-1'>Follow Us On<Image src={'/img/icons/twitter-icon.svg'} width={18} height={17} alt='twitter-icon' /></Link></li>
+                        <li><Link href={"mailto:hola@onchaincapital.es"}>Contact us</Link></li>
                     </ul>
                 </nav>
             </div>
