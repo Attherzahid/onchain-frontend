@@ -6,7 +6,7 @@ export default async function Page({ params }) {
     const { slug } = params;
 
     // Fetch the data for the page from WordPress
-    const res = await fetch(`http://local.onchain-backend.com/wp-json/wp/v2/pages?slug=${slug}`);
+    const res = await fetch(`https://onchaincapital.es/wp-json/wp/v2/pages?slug=${slug}`);
     const data = await res.json();
     const page = data.length ? data[0] : null;
 
