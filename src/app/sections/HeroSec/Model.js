@@ -34,11 +34,11 @@ const Model = () => {
 
             if (torus.current) {
                 // Convert the mouse position to NDC
-                const ndcX = (mousePosition.x / size.width) * 2 - 1;
-                const ndcY = -(mousePosition.y / size.height) * 2 + 1;
+                const ndcX = (mousePosition.x / size.width) * 2 - 1.5;
+                const ndcY = -(mousePosition.y / size.height) * 2 + 1.5;
 
                 // Create a 3D vector from the NDC mouse position
-                const vector = new THREE.Vector3(ndcX, ndcY, 0.5);
+                const vector = new THREE.Vector3(ndcX, ndcY, .5);
                 vector.unproject(camera);
 
                 // Calculate the direction from the object to the mouse
