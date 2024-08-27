@@ -15,8 +15,8 @@ const Header = () => {
                         <Image src={`img/icons/${!isToggle ? 'menu-toggler.svg': 'close-icon.svg'}`} alt='logo' width={isToggle ? 23 : 30} height={isToggle ? 23 : 20} />
                     </button>
                     <ul className={`menu ${isToggle == true && 'active'}`}>
-                        <li><Link href={"https://onchaincapital.es/join"}>Onchain Mastery</Link></li>
-                        <li><Link href={"https://x.com/0nchainCapital"} className='d-flex align-items-center gap-1' target='_blank'>Follow Us On<Image src={'/img/icons/twitter-icon.svg'} width={18} height={17} alt='twitter-icon' /></Link></li>
+                        <li><a href={"https://onchaincapital.es/join"}>Onchain Mastery</a></li>
+                        <li><a href={"https://x.com/0nchainCapital"} className='d-flex align-items-center gap-1' target='_blank'>Follow Us On<Image src={'/img/icons/twitter-icon.svg'} width={18} height={17} alt='twitter-icon' /></a></li>
                         <li><Link href={"mailto:hola@onchaincapital.es"}>Contact us</Link></li>
                     </ul>
                 </nav>
