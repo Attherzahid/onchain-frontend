@@ -1,6 +1,6 @@
 .hero-sec {
     position: relative;
-    padding: 94px 0 0;
+    padding: 0;
 
     .content-wrapper {
         position: absolute;
@@ -21,17 +21,12 @@
         
         >div>div:first-child {
             min-height: 540px;
-            height: calc(100vh - 199px) !important;
+            height: 100vh !important;
 
         }
     }
 }
 
-@media (max-width: 992px) {
-    .hero-sec {
-        padding: 74px 0 0;
-    }
-}
 @media (max-width: 475px) {
     .hero-sec {
         .object-wrapper {

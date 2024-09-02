@@ -4,12 +4,6 @@ import "@/app/styles/pages/home.scss"
 
 export default function Home() {
   return (
-    <>
-      <Header />
-      <main>
-        <HeroSec />
-      </main>
-      <Footer />
-    </>
+    <HeroSec />
   );
 }
